@@ -1,0 +1,6 @@
+Chain:
+  Add:
+    - -Iinclude
+    - -std=c++17
+Diagnostics:
+  UnusedIncludes: None

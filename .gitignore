@@ -1,35 +1,85 @@
-# Gradle files
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Expo / React Native
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+*.hbc
+*.jsbundle
+apps/mobile/dist*/
+
+# Generated native projects (Expo prebuild / continuous native generation)
+apps/mobile/android/
+apps/mobile/ios/
+apps/mobile/android/local.properties
+apps/mobile/ios/Pods/
+apps/mobile/ios/build/
+apps/mobile/ios/Podfile.lock
+
+# Gradle / Android build output for the local module
+apps/mobile/modules/volume-ar/android/build/
+apps/mobile/modules/volume-ar/android/.cxx/
 .gradle/
+
+# C++ / CMake
 build/
-.kotlin/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+apps/mobile/modules/volume-ar/core/build/
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.pdb
+*.ilk
 
-# Local configuration file (sdk path, etc)
-local.properties
+# Xcode
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
+# IDEs
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
+.vscode/
+*.iml
 *.hprof
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.expo-shared/
+
+# Environment
+.env
+.env*.local
+
+# Testing / tooling caches
+coverage/
+*.tsbuildinfo
+.eslintcache
+
+# Signing material
+*.keystore
+!debug.keystore
+*.jks
+*.p12
+*.mobileprovision
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini

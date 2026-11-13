@@ -1,0 +1,21 @@
+{
+  "name": "volume",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "core:build": "cmake -S apps/mobile/modules/volume-ar/core -B build/core && cmake --build build/core --config Release",
+    "core:test": "ctest --test-dir build/core -C Release --output-on-failure",
+    "mobile": "npm --workspace apps/mobile run start",
+    "android": "npm --workspace apps/mobile run android",
+    "ios": "npm --workspace apps/mobile run ios",
+    "typecheck": "npm --workspace apps/mobile run typecheck"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "typescript": "~5.9.2"
+  }
+}

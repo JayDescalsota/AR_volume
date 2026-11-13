@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Volume Scanner",
+    "slug": "volume-scanner",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "scheme": "volumescanner",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.volume.scanner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Used to pin building corners and measure volume in augmented reality.",
+        "UIRequiredDeviceCapabilities": ["arm64", "arkit"]
+      }
+    },
+    "android": {
+      "package": "com.volume.scanner",
+      "permissions": ["android.permission.CAMERA", "android.permission.INTERNET"]
+    },
+    "plugins": ["./plugins/withArCore"]
+  }
+}
